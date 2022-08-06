@@ -1,0 +1,40 @@
+<h1>Student</h1>
+
+<table>
+  <tr>
+    <th>id</th>
+    <th>first_name</th>
+    <th>last_name</th>
+    <th>email</th>
+    <th>dob</th>
+    <th>address</th>
+  </tr>
+  <% @students.each { |student| %>
+    <tr>
+      <td><%= student.id %></td>
+      <td><%= student.first_name %></td>
+      <td><%= student.last_name %></td>
+      <td><%= student.email %></td>
+      <td><%= student.dob %></td>
+      <td><%= student.address %></td>
+    </tr>
+  <% } %>
+</table>
+
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
